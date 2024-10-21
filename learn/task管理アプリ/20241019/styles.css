@@ -1,0 +1,190 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.task-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input, select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-list li div {
+    flex-grow: 1;
+}
+
+#task-list li button {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#task-list li button:hover {
+    background-color: #c82333;
+}
+
+/* 重要度に応じた色分け */
+.low {
+    background-color: #d4edda; /* 緑 - 低 */
+    border-color: #c3e6cb;
+}
+
+.medium {
+    background-color: #fff3cd; /* 黄色 - 中 */
+    border-color: #ffeeba;
+}
+
+.high {
+    background-color: #f8d7da; /* 赤 - 高 */
+    border-color: #f5c6cb;
+}
+
+/* 完了ボタンのスタイル */
+.complete-task {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px; /* 左に寄せるために右側にマージンを追加 */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.complete-task:hover {
+    background-color: #218838;
+}
+
+/* レベルバー */
+.level-bar {
+    margin-bottom: 20px;
+}
+
+.level-progress {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+}
+
+#level-fill {
+    background-color: #28a745;
+    width: 0%;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+#level-text {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.completed-tasks-container {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.completed-tasks-container h2 {
+    margin-top: 0;
+}
+
+.completed-tasks-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.completed-tasks-container li {
+    padding: 5px;
+    background-color: #d4edda;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+/* リセットボタンのスタイル */
+#reset-tasks {
+    position: fixed; /* 画面上で位置を固定 */
+    top: 10px; /* 上からの距離を指定 */
+    right: 10px; /* 右からの距離を指定 */
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000; /* 他の要素の上に表示されるように設定 */
+}
+
+#reset-tasks:hover {
+    background-color: #e0a800;
+}

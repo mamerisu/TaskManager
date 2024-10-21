@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タスク管理アプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- レベルバー -->
+        <div class="level-bar">
+            <span id="level-text">Level: 1</span>
+            <div class="level-progress">
+                <div id="level-fill"></div>
+            </div>
+        </div>
+
+        <h1>タスク管理アプリ</h1>
+
+        <div class="task-input">
+            <input type="text" id="new-task" placeholder="新しいタスクを入力">
+            <input type="datetime-local" id="deadline" placeholder="期限を設定">
+            <textarea id="notes" placeholder="備考を入力"></textarea>
+            <select id="priority">
+                <option value="low">低</option>
+                <option value="medium">中</option>
+                <option value="high">高</option>
+            </select>
+            <button id="add-task">タスクを追加</button>
+            <button id="reset-tasks">リセット</button>
+
+        </div>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <!-- 完了したタスク一覧 -->
+    <div class="completed-tasks-container">
+        <h2>完了したタスク一覧</h2>
+        <ul id="completed-tasks-list"></ul>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>
